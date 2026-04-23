@@ -58,17 +58,15 @@ public class EmployeeSalaryCalculator
 
 				if(HW <= standardWorkingHours)
 				{
-					//YOUR CODE STARTS HERE
-					 
-
-					//YOUR CODE ENDS HERE
+					basicPay = (HW * HR);
+					grossSalary = basicPay;
 				}
 				else
-				{
-					//YOUR CODE STARTS HERE
- 
-
-					//YOUR CODE ENDS HERE
+				{ //Overtime
+					overTime = HW-standardWorkingHours;
+					overTimeRate = HR * 2;
+					overTimePay = overTime * overTimeRate;
+					grossSalary = overTimePay;
 				}
 				return grossSalary;
 	}
